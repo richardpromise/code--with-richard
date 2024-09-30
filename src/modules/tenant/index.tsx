@@ -24,7 +24,7 @@ const Tenants = () => {
           </tr>
         </thead>
         <tbody>
-          <tr className="bg-gray-300 border border-black">
+          <tr className="border border-black">
             <td className="border-r border-black p-[10px]">Tenant 1</td>
             <td className="border-r border-black flex items-center gap-3  p-[10px]">  <span className="w-10 h-10 rounded-full" style={{backgroundImage : `url(${mike})`,
           backgroundPosition :"center" , backgroundSize:"cover"}}></span>Micheal Olarewaju</td>
