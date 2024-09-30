@@ -3,9 +3,8 @@
 import React from "react";
 
 export default function Register() {
-  return (
-    <>
-      <div className="w-[view] h-[100vh]">
+  return ( 
+      <div className="w-full h-[100vh]">
         <div className="h-[100%] w-[100%] flex items-center justify-center">
           <form className="bg-white h-[80%] w-[25%] flex flex-col justify-center p-4 uppercase gap-[30px]  shadow-black shadow-lg">
             <div className="text-black font-bold text-center mb-4">
@@ -46,6 +45,5 @@ export default function Register() {
           </form>
         </div>
       </div>
-    </>
   );
 }
