@@ -1,5 +1,7 @@
 import React from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import Aunthenticated from "../modules/aunthenticated";
+import Register from "../modules/register";
 
 interface MainLayoutProps {
   children?: any;
@@ -19,11 +21,11 @@ const Routes = () => {
       children: [
         {
           path: "/",
-          element: <div>authenticted</div>,
+          element: <Aunthenticated/> ,
         },
         {
-          path: "/auth",
-          element: <div>unauthenticted</div>,
+          path: "/register",
+          element: <Register/>,
         },
       ],
     },
