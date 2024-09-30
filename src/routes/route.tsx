@@ -1,7 +1,10 @@
 import React from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import Aunthenticated from "../modules/aunthenticated";
-import Register from "../modules/register";
+import Authenticated from "../layouts/authenticated";
+import Unauthenticted from "../layouts/unauthenticted";
+import Dashboard from "../modules/home";
+import Users from "../modules/users";
+import Tenants from "../modules/tenant";
 
 interface MainLayoutProps {
   children?: any;
@@ -21,11 +24,31 @@ const Routes = () => {
       children: [
         {
           path: "/",
-          element: <Aunthenticated/> ,
+          element: <Authenticated />,
+          children: [
+            {
+              index: true,
+              element: <Dashboard />,
+            },
+            {
+              path: "/tentant",
+              element: <Tenants />,
+            },
+            {
+              path: "/users",
+              element: <Users />,
+            },
+          ],
         },
+      ],
+    },
+    {
+      path: "/auth",
+      element: <Unauthenticted />,
+      children: [
         {
-          path: "/register",
-          element: <Register/>,
+          index: true,
+          element: <h1>register</h1>,
         },
       ],
     },
