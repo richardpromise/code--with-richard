@@ -16,7 +16,7 @@ const Tenants = () => {
   return (
     <div className="p-[30px]">
       <table className=" w-[80%] mx-auto ">
-        <thead className=" bg-red-500 border">
+        <thead className=" bg-[#d3d9d4fc] border">
           <tr className=" border border-black">
             <th className="border-r border-black text-left p-[10px]">Tenants</th>
             <th className="border-r border-black text-left p-[10px]">Tenant Details</th>
