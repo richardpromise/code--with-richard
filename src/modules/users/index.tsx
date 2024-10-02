@@ -34,9 +34,9 @@ const Users = () => {
     changeColor("text-black");
   }
 
-  useEffect(() => {
-    console.log("hello wolrd");
-  }, [color]);
+  // useEffect(() => {
+  //   console.log("hello wolrd");
+  // }, [color]);
 
   useEffect(() => {
     setheader("Users");
