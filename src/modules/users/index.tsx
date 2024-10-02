@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHeaderContext } from "../../context/header";
 import CustomButton from "../../components/button";
+import { useNavigate } from "react-router-dom";
 
 const Users = () => {
   const { setheader } = useHeaderContext();
@@ -41,6 +42,11 @@ const Users = () => {
   useEffect(() => {
     setheader("Users");
   }, []);
+  const navigate = useNavigate();
+
+  function Changebackground() {
+    navigate("/tentant");
+  }
 
   return (
     <div className={`p-12 flex flex-col gap-[30px] h-full ${bgColor}`}>
@@ -60,7 +66,7 @@ const Users = () => {
       </div>
 
       <button
-        onClick={changeBackground}
+        onClick={Changebackground}
         className={`border-2 bg-gray-500 ${btnColor}`}
       >
         Full background change
