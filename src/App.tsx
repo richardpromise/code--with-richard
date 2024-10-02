@@ -1,3 +1,5 @@
+/** @format */
+
 import Routes from "./routes/route";
 
 function App() {
