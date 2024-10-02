@@ -8,6 +8,8 @@ import Dashboard from "../modules/home";
 import Users from "../modules/users";
 import Tenants from "../modules/tenant";
 import Register from "../modules/register";
+import Signup from "../modules/signin";
+import Resetpassword from "../modules/resetpassword";
 
 interface MainLayoutProps {
   children?: any;
@@ -51,7 +53,15 @@ const Routes = () => {
       children: [
         {
           index: true,
+          element: <Signup />,
+        },
+        {
+          path: "register",
           element: <Register />,
+        },
+        {
+          path: "forgotten-password",
+          element: <Resetpassword />,
         },
       ],
     },
