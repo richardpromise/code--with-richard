@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Authenticated from "../layouts/authenticated";
@@ -5,6 +7,7 @@ import Unauthenticted from "../layouts/unauthenticted";
 import Dashboard from "../modules/home";
 import Users from "../modules/users";
 import Tenants from "../modules/tenant";
+import Register from "../modules/register";
 
 interface MainLayoutProps {
   children?: any;
@@ -48,7 +51,7 @@ const Routes = () => {
       children: [
         {
           index: true,
-          element: <h1>register</h1>,
+          element: <Register />,
         },
       ],
     },
