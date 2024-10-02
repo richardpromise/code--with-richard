@@ -12,7 +12,7 @@ const Authenticated = () => {
 
       <div className="flex w-[85%] flex-col ">
         <Header />
-        <div className="h-[calc(100vh-70px)]">
+        <div className="h-[calc(100vh-70px)] px-12 p-y-2">
           <Outlet />
         </div>
       </div>
