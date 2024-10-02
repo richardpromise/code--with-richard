@@ -1,12 +1,20 @@
 import React from "react";
+
 interface buttonProps {
   size: string;
   isDisabled: boolean;
   children: string;
   onCLick: () => void;
+  type: string;
 }
 
-const CustomButton = ({ children, isDisabled, size, onCLick }: buttonProps) => {
+const CustomButton = ({
+  children,
+  isDisabled,
+  size,
+  onCLick,
+  type,
+}: buttonProps) => {
   const buttonSize =
     size === "lg"
       ? "w-full"
@@ -15,11 +23,18 @@ const CustomButton = ({ children, isDisabled, size, onCLick }: buttonProps) => {
       : size === "sm"
       ? "w-1/3"
       : "";
+
+  const buttonColor =
+    type === "outlined" ? "bg-black text-white" : "bg-white text-black";
   return (
     <div className="w-full">
-      {/* <button className={``} onClick={onclick} disabled={isDisabled}>
+      <button
+        className={`${buttonSize} ${buttonColor}`}
+        onClick={onCLick}
+        disabled={isDisabled}
+      >
         {children}
-      </button> */}
+      </button>
     </div>
   );
 };

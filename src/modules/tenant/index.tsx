@@ -16,7 +16,7 @@ const Tenants = () => {
   return (
     <div className="p-[30px]">
       <table className=" w-[80%] mx-auto ">
-        <thead className=" bg-[#d3d9d4fc] border">
+        <thead className=" bg-cyan-900 border">
           <tr className=" border border-black">
             <th className="border-r border-black text-left p-[10px]">Tenants</th>
             <th className="border-r border-black text-left p-[10px]">Tenant Details</th>
@@ -26,7 +26,7 @@ const Tenants = () => {
         <tbody>
           <tr className="border border-black">
             <td className="border-r border-black p-[10px]">Tenant 1</td>
-            <td className="border-r border-black flex items-center gap-3  p-[10px]">  <span className="w-10 h-10 rounded-full" style={{backgroundImage : `url(${mike})`,
+            <td className="border-r border-black flex items-center gap-3  p-[10px]"><span className="w-10 h-10 rounded-full" style={{backgroundImage : `url(${mike})`,
           backgroundPosition :"center" , backgroundSize:"cover"}}></span>Micheal Olarewaju</td>
             <td className="px-[10px]">123 Main St</td>
           </tr>
