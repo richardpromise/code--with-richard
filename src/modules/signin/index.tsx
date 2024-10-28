@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import CustomButton from "../../components/button";
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -45,9 +46,17 @@ export default function Signup() {
 
         <div className="flex  flex-col items-center text-red-700 text-">
           <p className="cursor-pointer">forgetten password?</p>
-          <p className="cursor-pointer" onClick={signup}>
+          <CustomButton
+            onCLick={signup}
+            isDisabled={false}
+            size="mid"
+            type="outlined"
+          >
+            sign up
+          </CustomButton>
+          {/* <p className="cursor-pointer" onClick={signup}>
             sign-up
-          </p>
+          </p> */}
         </div>
       </form>
     </div>

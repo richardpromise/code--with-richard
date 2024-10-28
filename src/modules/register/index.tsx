@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import CustomButton from "../../components/button";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -75,6 +76,15 @@ export default function Register() {
             <p className="cursor-pointer" onClick={Signin}>
               sign-in
             </p>
+            {/* <CustomButton
+              onCLick={Signin}
+              isDisabled={false}
+              size="mid"
+              type="fhfjkfkjfjk"
+              touches="p-10"
+            >
+              sign up
+            </CustomButton> */}
           </div>
         </form>
       </div>

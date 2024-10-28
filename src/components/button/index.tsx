@@ -6,6 +6,7 @@ interface buttonProps {
   children: string;
   onCLick: () => void;
   type: string;
+  touches?: string;
 }
 
 const CustomButton = ({
@@ -14,6 +15,7 @@ const CustomButton = ({
   size,
   onCLick,
   type,
+  touches,
 }: buttonProps) => {
   const buttonSize =
     size === "lg"
@@ -29,7 +31,7 @@ const CustomButton = ({
   return (
     <div className="w-full">
       <button
-        className={`${buttonSize} ${buttonColor}`}
+        className={`${buttonSize} ${buttonColor} ${touches}`}
         onClick={onCLick}
         disabled={isDisabled}
       >
